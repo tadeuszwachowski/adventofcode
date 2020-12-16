@@ -18,12 +18,7 @@ with open("day13.txt","r") as file:
     num_buses = len(uniq_buses)
     # print(num_buses)
     ts = [i for i in range(len(buses))]
-    # print(ts)
-
-    # departures = [timestamp % ub for ub in uniq_buses]
-    # print(buses)
-    # print(ts)
-    # print(departures)
+    
 
     buses_narrow = []
     ts_narrow = []
@@ -34,12 +29,7 @@ with open("day13.txt","r") as file:
 
     print("Buses: ", buses_narrow)
     print("ts: ", ts_narrow)
-    # print("Careful, this can take a long time....")
     
-    # i = 0 # normal
-    # i = 100000000000000
-    
-
     def chinese_remainder(n, a):
         p = math.prod(n)
         total = sum(y * pow(p // x, -1, x) * (p // x) for x, y in zip(n, a))
