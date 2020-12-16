@@ -14,7 +14,6 @@ with open("day8.txt","r") as file:
         instructions[i] = [instr, val]
         i += 1
 
-    # print(instructions)
     visited_ind = []
     accu = 0
     index = 0
@@ -33,5 +32,3 @@ with open("day8.txt","r") as file:
             break
     print("Visited: ", len(visited_ind))
     print("Accu:", accu)
-
-    # print(f)
