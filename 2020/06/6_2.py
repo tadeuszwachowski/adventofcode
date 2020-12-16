@@ -20,6 +20,6 @@ with open("day6.txt","r") as file:
             else:
                 answers = answers & set(line)
 
-    count += len(answers) # ostatnia linijka
+    count += len(answers)
     print(count)
 
