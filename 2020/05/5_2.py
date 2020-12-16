@@ -1,8 +1,7 @@
 with open("day5.txt","r") as file:
-    # max_id = 0
+
     seat_table = [[0,0,0,0,0,0,0,0] for i in range(0,128)]
-    # print(seat_table)
-    # print(len(seat_table))
+
     for line in file:
         line = line.strip()
         S = 0
@@ -23,22 +22,21 @@ with open("day5.txt","r") as file:
                 tmp_h = (W+E+1)/2
                 W = tmp_h
         seat_table[int(N)][int(E)] = 1
-        # seat_id = N*8 + E
-        # if seat_id > max_id:
-        #     max_id = seat_id
-        # print(line, N, S, E, W)
-    # print(max_id)
+
+
+    # now we print the layout
     i = 0
     for row in seat_table:
         print(row, i)
         i += 1
-    # teraz czas na szukanie i liczenie
+ 
+    # and the answer
     print("#######################################")
 
     i = 0
     for row in seat_table:
         if sum(row) == 7:
-            print(row)
+            # print(row)
             print("row: %d, seat: %d, id: %d" % (i,row.index(0),i*8+row.index(0)))
         i += 1
 
