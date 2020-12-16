@@ -72,10 +72,9 @@ with open("day4.txt","r") as file:
                     fields[field] = data
             
             if (len(fields.keys()) == 8) or (len(fields.keys()) == 7 and 'cid' not in fields.keys()):
-                # print(fields.keys(), fields.values(), len(fields.keys()), 'cid' not in fields.keys())
-                # print(fields, len(fields.keys()), "Good: ", evaluate(fields))
 
                 if evaluate(fields) == True:
                     valid += 1
                 fields = {}
+                
 print("Valid passports:", valid)
