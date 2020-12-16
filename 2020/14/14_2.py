@@ -42,9 +42,7 @@ with open("day14.txt","r") as file:
                 mem[a] = value
                 
 
-    # print(mem)
     ans = 0 # 397
-    # print(mem.values())
     for v in mem.values():
         ans += v
     print("Answer: ", ans)
