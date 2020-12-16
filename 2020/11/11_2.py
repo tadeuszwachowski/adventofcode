@@ -58,7 +58,7 @@ while repeat:
             elif layout[y][x] == "#" and adjacent[y][x] >= 5:
                 new_layout[y][x] = "L"
 
-    # # Do wypisywania layoutów
+    # # print out layouts
     # print("Przebieg: ", i)
     # print("##########################")
     # for a in adjacent:

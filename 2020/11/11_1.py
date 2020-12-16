@@ -5,23 +5,9 @@ with open("day11.txt","r") as file:
     for line in f:
         layout.append(list(line))
 
-# for row in layout:
-#     print(row)
 
 adjacent = [[0 for y in range(len(layout))] for x in range(len(layout[0]))]
-# adjacent = [] # table with number of adjacents
-# for y in range(len(layout)):
-#     adjacent.append([])
-#     for x in range(len(layout[y])):
-#         adjacent[y].append(0)
-# adj_zeros = [[0 for y in range(len(layout))] for x in range(len(layout[0]))]
-# new_layout = layout.copy()
 
-# print("Starting layout: ")
-# for l in layout:
-#     print(l)
-
-# new_layout = layout.copy()
 new_layout = []
 for y in range(len(layout)):
     new_layout.append([])
@@ -86,13 +72,6 @@ for row in layout:
         if seat == "#":
             occupied += 1
 print(occupied)
-    # print("Przebieg: ", i)
-    # for a in adjacent:
-    #     print(a)
-    # print("##########################")
-    # for l in layout:
-    #     print(l)
-# for l in layout:
-#     print(l)
+
 
 
