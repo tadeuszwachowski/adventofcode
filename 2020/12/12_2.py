@@ -4,9 +4,7 @@ with open("day12.txt","r") as file:
     
     pos = [0,0]
     waypoint = [10,1]
-    # directions = [
-    #     [0,1],[1,0],[0,-1],[-1,0] # N E S W
-    # ] 
+    
     d = 1
     for line in f:
         action = line[0]
