@@ -1,21 +1,22 @@
 with open("day7.txt","r") as file:
+    
     elders = {}
     checked = []
+    
     for line in file:
+
         line = line.strip().replace('.','')
         style, contains = line.split(" bags contain ")
         elements = contains.split(", ")
-        # print(elements)
+        
         for i in range(len(elements)):
             elements[i] = elements[i].replace('bags','bag').replace('bag','')[2:].strip()
             lesser_bag = elements[i]
             if not lesser_bag in elders:
                 # print("Adding:", style, " to elders:", lesser_bag)
                 elders[lesser_bag] = [style]
-                # print(elders)
             else:
                 elders[lesser_bag].append(style)
-        # print(style, requirements)
 
     print(elders)
 

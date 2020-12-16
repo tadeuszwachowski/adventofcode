@@ -5,11 +5,11 @@ with open("day7.txt","r") as file:
 
     for line in file:
         line = line.strip().replace('.','')
-        style, contains = line.split(" bags contain ") # rozdziel na zewnętrzną i wewnętrzne
-        elements = contains.split(", ") # rozdziel wewnętrzne na pojedyńcze
+        style, contains = line.split(" bags contain ") # split to external and internal
+        elements = contains.split(", ") # split internal in single
 
         for i in range(len(elements)):
-            elements[i] = elements[i].replace('bags','bag').replace('bag','').strip() # wybierz tylko kolor
+            elements[i] = elements[i].replace('bags','bag').replace('bag','').strip() # choose color only
             inside[style] = []
 
             for smaller_bag in elements:
@@ -31,9 +31,6 @@ with open("day7.txt","r") as file:
         next_count = len(to_check)
         checked.append(item)
 
-    # for item in inside.keys():
-    #     print("Key: ", item,", value: ", inside[item])
-    #     time.sleep(1.5)
 
     while prev_count != next_count:
         prev_count = next_count
@@ -53,11 +50,11 @@ with open("day7.txt","r") as file:
             except KeyError:
                 pass
 
-        for i in range(len(to_remove)): # usuń z listy do sprawdzenia już sprawdzone
+        for i in range(len(to_remove)): # remove already checked
             to_check.pop(0)
         to_remove = []
 
-    for item in set(checked): # wypisz jakie torby musi zawierać SHINY GOLD
+    for item in set(checked): # print which bags SHINY GOLD must contain
         print(item,checked.count(item))
     print(len(checked))
 
