@@ -27,9 +27,7 @@ with open("day16.txt","r") as file:
                     valids.append(v)
             name_range.sort()
         acceptable[name] = name_range
-        # print(acceptable)
-    # for a in acceptable.keys():
-    #     print(a, acceptable[a])
+
     
     valid_tickets = []
     nearby = nearby.split(":\n")[1].strip().split("\n")

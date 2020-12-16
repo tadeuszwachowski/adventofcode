@@ -25,9 +25,5 @@ with open("day16.txt","r") as file:
             t = int(t)
             if t not in valids:
                 invalids.append(t)
-    # print(invalids)
+
     print(sum(invalids))
-    # print(nearby)
-    # print(l,h)
-    # print(o)
-    # print(options)
