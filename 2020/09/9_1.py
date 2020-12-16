@@ -19,13 +19,14 @@ with open("day9.txt","r") as file:
                 for y in range(x+1,len(preamble)):
                     if num == preamble[x] + preamble[y]:
                         found = True
-                        # print(f"{num} is the sum of {preamble[x]} and {preamble[y]}")
+
             if not found:
                 invalid.append(num)
+
             preamble.append(num)
             preamble.pop(0)
             i += 1
-    # print(preamble)
+
     print(invalid)
 
 
