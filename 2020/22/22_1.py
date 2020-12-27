@@ -25,8 +25,7 @@ while len(deck1) > 0 and len(deck2) > 0:
     elif card1 < card2:
         deck2 += [card2,card1]
         print('Player 2 wins the round\n')
-
-    
+        
     deck1.pop(0)
     deck2.pop(0)
 
