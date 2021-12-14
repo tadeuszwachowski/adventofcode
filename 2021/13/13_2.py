@@ -5,7 +5,7 @@ def fold_horizontal(array,foldline):
     chunksize = [foldline,foldline+1]
     # cut into two parts ignoring the line
     top,_,bottom = np.array_split(array,chunksize,axis=0)
-    # fold the parts and 
+    # fold the parts 
     folded = np.bitwise_or(top,np.flipud(bottom))
     return folded
 
@@ -14,6 +14,7 @@ def fold_vertical(array,foldline):
     chunksize = [foldline,foldline+1]
     # cut into two parts ignoring the line
     left,_,right = np.array_split(array,chunksize,axis=1)
+    # fold the parts 
     folded = np.bitwise_or(left,np.fliplr(right))
     return folded
 
