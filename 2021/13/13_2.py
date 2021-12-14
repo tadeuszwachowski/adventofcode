@@ -48,6 +48,6 @@ with open('input.txt') as f:
                     grid = fold_horizontal(grid,foldline)
 
 for row in grid:
-    print(''.join(['#' if point==1 else ' ' for point in row]))
+    print(''.join(['█' if point==1 else ' ' for point in row]))
                 
     
